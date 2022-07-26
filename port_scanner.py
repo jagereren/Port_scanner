@@ -1,13 +1,9 @@
-
-from email.message import EmailMessage
-import subprocess
 import sys
 import socket
 from datetime import datetime
-import multiprocessing
 
 def port_scanner():
-    target = input("Enter a remote host to scan: ") 
+    target = input("Enter a target to scan: ") 
     remoteServerIP = socket.gethostbyname(target)
     socket.setdefaulttimeout(2)
     print("="*50)
